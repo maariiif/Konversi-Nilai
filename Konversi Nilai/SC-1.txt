@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Percobaan 8.1 | 2110151046</title>
+    </head>
+    <style type="text/css" media="screen">
+        h6{
+            padding-bottom: 0;
+            color: gray;
+        }
+    </style>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <a href="SC-1.txt">
+                    <button>Source Code</button>
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <h1 align="center"><stong>KONVERSI NILAI</stong></h1>
+        <form action="konversi.php" method="post">
+            <table align="center">
+                <tr>
+                    <td>Nama </td>
+                    <td> : </td>
+                    <td><input type="text" name="nama" onkeydown="Huruf(window.event)"></td>
+                </tr>
+                <tr>
+                    <td>NRP </td>
+                    <td> : </td>
+                    <td><input type="text" name="nrp" onkeydown="Angka(window.event)"></td>
+                </tr>
+                <tr>
+                    <td>Nilai Angka </td>
+                    <td> : </td>
+                    <td><input type="text" name="nilai"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button type="submit">Kirim</button>
+                        <button type="reset">Clear</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <h6 align="center">editor By. Ma'arif  |  2110151046  |  <i>maarif46@it.student.pens.ac.id</i></h6>
+    </body>
+    <script>
+        
+        function Huruf(event) {
+			var kar = event.keyCode;
+  			if(kar > 31 && kar != 32 && (kar < 65 || kar > 90) && (kar < 97 || kar > 122))
+  			{
+  				event.preventDefault();
+  				return false;
+  			}
+		}
+
+		function Angka(event) {
+			var kar = event.keyCode;
+  			if(kar > 57 || (kar>32 && kar<48))
+  			{
+  				event.preventDefault();
+  				return false;
+  			}
+		}
+    </script>
+</html>
